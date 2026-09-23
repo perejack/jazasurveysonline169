@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 152 100% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 17% 97%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 210 17% 97%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 42 100% 55%;
+    --accent-foreground: 0 0% 7%;
+    --destructive: 352 85% 49%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 17% 91%;
+    --input: 210 17% 91%;
+    --ring: 152 100% 27%;
+    --radius: 0.75rem;
+
+    --gold: 42 100% 55%;
+    --gold-foreground: 0 0% 7%;
+    --kenyan-green: 152 100% 27%;
+    --kenyan-red: 352 85% 49%;
+    --surface: 210 17% 97%;
+
+    --font-display: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 152 100% 27%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 17% 95%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 210 17% 91%;
+    --sidebar-ring: 152 100% 27%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(152 100% 27% / 0.85), hsl(152 100% 27% / 0.3), transparent);
+  }
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(42 100% 55%), hsl(42 80% 45%));
+  }
+  .gradient-bronze {
+    background: linear-gradient(135deg, hsl(30 60% 55%), hsl(30 40% 40%));
+  }
+  .gradient-silver {
+    background: linear-gradient(135deg, hsl(210 10% 70%), hsl(210 10% 55%));
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .shadow-premium {
+    box-shadow: 0 10px 40px -10px hsl(152 100% 27% / 0.25);
+  }
+  .shadow-card {
+    box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.08);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
